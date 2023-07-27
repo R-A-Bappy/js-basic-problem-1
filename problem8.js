@@ -1,10 +1,10 @@
 function findSecondSmallest(arr) {
     if (arr.length < 2) {
-        throw new Error("Array must contain at least two elements.");
+        return ("Array must contain at least two elements.");
     }
 
-    let smallest = Infinity;
-    let secondSmallest = Infinity;
+    let smallest = 99999;
+    let secondSmallest = 99999;
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] < smallest) {
@@ -22,6 +22,5 @@ function findSecondSmallest(arr) {
     return secondSmallest;
 }
 
-// Example usage:
 const numbers = [12, 5, 1, 8, 20, 15];
-console.log("Second Smallest:", findSecondSmallest(numbers)); // Output: 5
+console.log(findSecondSmallest(numbers));
